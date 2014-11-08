@@ -1,0 +1,24 @@
+// Schelet cod Tema 3 SD - Inverted index
+// Autor: octavian.rinciog@gmail.com
+
+In aceasta arhiva gasiti un schelet de cod pentru tema3 SD. 
+Acest schelet de cod citeste de la tastatura 3 tipuri de comenzi (PUT, GET si SITE) si le parseaza. 
+Pentru usurinta s-a folosit clasa std::string pe care aveti voie sa o folositi. 
+Nu sunteti obligati sa folositi acest schelet de cod in tema voastra.
+
+Clasa Algorithm are implementate urmatoarele metode:
+	* void indexSite(const std::string &row);
+			=>  Proceseaza o comanda PUT, parsand site-ul ce va fi indexat si cuvintele din cadrul acestuia
+	* void getSites(const std::string &row);
+			=>  Proceseaza o comanda GET, parsand cuvintele din interogare
+	* void wordInSite(const std::string &row);
+			=> 	Proceseaza o comanda SITE, parsand site-ul si interogarea ce trebuie cautate in site
+	* void resolve();
+			=> citeste de la std::cin cate o comanda pe linie si apeleaza functia specifica procesarii fiecarei comenzi
+
+			
+Compilare:
+	make build
+	
+Rulare:
+	make run

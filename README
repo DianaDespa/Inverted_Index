@@ -1,0 +1,34 @@
+Despa Diana-Alexandra 311CA
+
+Tema 3 - Inverted Index
+
+	In realizarea temei am folosit scheletul de cod pus la dispozitie pe site.
+	Pentru implementarea metodei "Inverted index" am utilizat liste liniare 
+dublu inlantuite ca valori ale hashtable-ului. Listele sunt reprezentate de 
+clasele LinkedList si SortedLinkedList, care o mosteneste pe prima, acestea 
+continand metodele clasice de adaugare, stergere si verificare a continutului 
+unei liste, si o metoda pentru supraincarcarea operatorului de atribuite, 
+pentru a ma asigura ca aceasta operatie este realizata corect (stergerea 
+continutului listei din stanga operatorului si apoi adaugarea tuturor 
+elementelor din lista din dreapta operatorului).
+	Clasa Hashtable contine metode pentru: inserarea unei valori cu o anumita 
+cheie(put), verificare existentei unei chei(hasKey), verificare existentei unei
+valori cu o anumita cheie(hasValue), intoarcerea unui pointer la continutul 
+unei chei / la o lista de site-uri(get), redimensionarea hashtable-ului atunci 
+cand raportul dintre dimensiunea structurii si capacitatea ei totala depaseste 
+factorul de incarcare. Nodurile hashtable-ului(elem_info) sunt formate din 2 
+componente: un cuvant cheie si un pointer la lista de site-uri care ii 
+corespunde. In clasa elem_info am adaugat o metoda pentru supraincarcarea 
+operatorului de atribuire.
+	La clasa Algorithm din scheletul de cod am declarat un membru de clasa 
+Hashtable cu care sunt realizate toate operatiile indicate in enunt. 
+	Pentru functia "indexSite", care se apeleaza la comanda "PUT", doar adaug la 
+hashtable-ul membru site-ul indicat, cheile fiind pe rand cuvintele din comanda.
+	Pentru functia "getSites", care corespunde comenzii "GET", realizez 
+intersectia tuturor listelor de site-uri care au drept chei cuvintele din 
+interogare, utilizand metoda "intersect". Aceasta parcurge cele doua liste ale
+caror adrese sunt date ca parametrii intr-un mod similar cu cel de la intercla-
+sare si adauga elementele comune la lista ce trebuie intoarsa de functie.
+	Functia "wordInSite", care corespunde comenzii "SITE" se foloseste de metoda
+"hasValue" din Hashtable pentru a verifica daca site-ul din comanda se afla in 
+listele cuvintelor cheie din interogare.
